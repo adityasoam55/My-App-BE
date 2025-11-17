@@ -11,6 +11,10 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: true })); // Allow front-end origin
 
+app.get("/", (req, res) => {
+  res.send("Backend working!");
+});
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
