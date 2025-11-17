@@ -11,7 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://my-app-fe.netlify.app"],
+    origin: [
+      "http://localhost:5173",
+      "https://my-app-fe.netlify.app",
+      "https://my-app-fe-rust.vercel.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
